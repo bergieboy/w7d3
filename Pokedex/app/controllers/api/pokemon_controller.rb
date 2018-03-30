@@ -1,6 +1,6 @@
 class Api::PokemonController < ApplicationController
   def index
-    @pokemon = Pokemon.all
+    @pokemon = Pokemon.all.includes(:items)
     render :index
   end
 
